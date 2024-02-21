@@ -1,0 +1,9 @@
+.*.sw*
+_build/*
+.*.un~
+
+.ipynb_*
+*.pyc
+
+outputs/*
+/data/
