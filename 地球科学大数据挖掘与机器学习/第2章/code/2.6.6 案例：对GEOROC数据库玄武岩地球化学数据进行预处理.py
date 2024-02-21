@@ -40,4 +40,4 @@ df.dropna(axis = 0,how ='any',inplace=True)
 print('去除异常值前的数据的形状为：', basalt.shape)
 print('去除异常值后的数据的形状为：',df.shape)
 #保存数据    
-df.to_csv('./tmp/basalt.csv',index = False)
+df.to_csv('../tmp/basalt.csv',index = False)
