@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+
+# 代码 5-1
+
+Algorithm1: Computing SimRank on MapReduce
+Input: Graph G, initialized S0
+  for t = 0: T-1
+    Map Function((a,b), St(a,b))
+    find a,b's neighbor I(a) and I(b) respectively
+    for each c belongs I(a), d belongs I(b)
+      output ((c,d), St(a,b))
+    Reduce Function (Key=(c,d), Values=vs[])
+      if c = d
+        St+1(c,d) = 1
+      else
+        St+1(c,d) = C/len(vs)(sum(vs))
+      output(c,d),St+1(c,d)
+Output: update St
+
+
+
+# 代码 5-2
+
+Algorithm2: Computing Delta-SimRank on MapReduce
+Input: Graph G, initialized delta_t
+Map function((a,b), delta_t(a,b))
+  if a = b or delta_t(a,b) <= eplison
+    return
+  find a,b's neighbor I(a) and I(b) respectively
+  for each c belongs to I(a), d belongs I(b)
+    output (c,d), c/(|I(c)||I(d)|)delta_t(a,b)
+Reduce function (Key=(c,d), Values=vs[])
+  if c = d
+    output delta_t+1(c,d) = 0
+  else 
+    output delta_t+1 = sum(vs)
+Output update delta_t+1
+Algorithm3: An efficient approach to compute SimRank
+Input: Graph G, init SimRank s0
+Update SimRank using Algorithm 1 and obtain s1
+init Delta-SimRankk by delta_1 = s1 - s0
+for t = 1: T-1
+  update delta_t+1 SimRank as in Algorithm 2.
+  St+1 = st + delta_t+1
+Output: updated SimRank score St
