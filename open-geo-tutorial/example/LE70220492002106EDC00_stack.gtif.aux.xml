@@ -1,0 +1,33 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>band 1 reflectance</Description>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">16000</MDI>
+      <MDI key="STATISTICS_MEAN">1178.732496</MDI>
+      <MDI key="STATISTICS_MINIMUM">544</MDI>
+      <MDI key="STATISTICS_STDDEV">1991.0624260172</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Description>band 2 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Description>band 3 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="4">
+    <Description>band 4 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="5">
+    <Description>band 5 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="6">
+    <Description>band 7 reflectance</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="7">
+    <Description>band 6 temperature</Description>
+  </PAMRasterBand>
+  <PAMRasterBand band="8">
+    <Description>Band 8</Description>
+  </PAMRasterBand>
+</PAMDataset>
